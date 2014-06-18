@@ -1,0 +1,6 @@
+// Rename this file to settings.json and change the settings to match your Google Account credentials
+{
+  "email": "me@gmail.com",
+  "password": "foobar",
+  "android_id": "0000000000000000"
+}

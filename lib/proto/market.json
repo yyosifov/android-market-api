@@ -1,0 +1,1100 @@
+{
+    "package": null,
+    "messages": [
+        {
+            "name": "AppsRequest",
+            "fields": [
+                {
+                    "rule": "optional",
+                    "options": {},
+                    "type": "AppType",
+                    "name": "appType",
+                    "id": 1
+                },
+                {
+                    "rule": "optional",
+                    "options": {},
+                    "type": "string",
+                    "name": "query",
+                    "id": 2
+                },
+                {
+                    "rule": "optional",
+                    "options": {},
+                    "type": "string",
+                    "name": "categoryId",
+                    "id": 3
+                },
+                {
+                    "rule": "optional",
+                    "options": {},
+                    "type": "string",
+                    "name": "appId",
+                    "id": 4
+                },
+                {
+                    "rule": "optional",
+                    "options": {},
+                    "type": "bool",
+                    "name": "withExtendedInfo",
+                    "id": 6
+                },
+                {
+                    "rule": "optional",
+                    "options": {
+                        "default": "NONE"
+                    },
+                    "type": "OrderType",
+                    "name": "orderType",
+                    "id": 7
+                },
+                {
+                    "rule": "optional",
+                    "options": {},
+                    "type": "uint64",
+                    "name": "startIndex",
+                    "id": 8
+                },
+                {
+                    "rule": "optional",
+                    "options": {},
+                    "type": "int32",
+                    "name": "entriesCount",
+                    "id": 9
+                },
+                {
+                    "rule": "optional",
+                    "options": {
+                        "default": "ALL"
+                    },
+                    "type": "ViewType",
+                    "name": "viewType",
+                    "id": 10
+                }
+            ],
+            "enums": [
+                {
+                    "name": "OrderType",
+                    "values": [
+                        {
+                            "name": "NONE",
+                            "id": 0
+                        },
+                        {
+                            "name": "POPULAR",
+                            "id": 1
+                        },
+                        {
+                            "name": "NEWEST",
+                            "id": 2
+                        },
+                        {
+                            "name": "FEATURED",
+                            "id": 3
+                        }
+                    ],
+                    "options": {}
+                },
+                {
+                    "name": "ViewType",
+                    "values": [
+                        {
+                            "name": "ALL",
+                            "id": 0
+                        },
+                        {
+                            "name": "FREE",
+                            "id": 1
+                        },
+                        {
+                            "name": "PAID",
+                            "id": 2
+                        }
+                    ],
+                    "options": {}
+                }
+            ],
+            "messages": [],
+            "options": {}
+        },
+        {
+            "name": "AppsResponse",
+            "fields": [
+                {
+                    "rule": "repeated",
+                    "options": {},
+                    "type": "App",
+                    "name": "app",
+                    "id": 1
+                },
+                {
+                    "rule": "optional",
+                    "options": {},
+                    "type": "int32",
+                    "name": "entriesCount",
+                    "id": 2
+                }
+            ],
+            "enums": [],
+            "messages": [],
+            "options": {}
+        },
+        {
+            "name": "Category",
+            "fields": [
+                {
+                    "rule": "optional",
+                    "options": {},
+                    "type": "int32",
+                    "name": "appType",
+                    "id": 2
+                },
+                {
+                    "rule": "optional",
+                    "options": {},
+                    "type": "string",
+                    "name": "title",
+                    "id": 4
+                },
+                {
+                    "rule": "optional",
+                    "options": {},
+                    "type": "string",
+                    "name": "categoryId",
+                    "id": 3
+                },
+                {
+                    "rule": "optional",
+                    "options": {},
+                    "type": "string",
+                    "name": "subtitle",
+                    "id": 5
+                },
+                {
+                    "rule": "repeated",
+                    "options": {},
+                    "type": "Category",
+                    "name": "subCategories",
+                    "id": 8
+                }
+            ],
+            "enums": [],
+            "messages": [],
+            "options": {}
+        },
+        {
+            "name": "CommentsRequest",
+            "fields": [
+                {
+                    "rule": "optional",
+                    "options": {},
+                    "type": "string",
+                    "name": "appId",
+                    "id": 1
+                },
+                {
+                    "rule": "optional",
+                    "options": {},
+                    "type": "int32",
+                    "name": "startIndex",
+                    "id": 2
+                },
+                {
+                    "rule": "optional",
+                    "options": {},
+                    "type": "int32",
+                    "name": "entriesCount",
+                    "id": 3
+                }
+            ],
+            "enums": [],
+            "messages": [],
+            "options": {}
+        },
+        {
+            "name": "CommentsResponse",
+            "fields": [
+                {
+                    "rule": "repeated",
+                    "options": {},
+                    "type": "Comment",
+                    "name": "comments",
+                    "id": 1
+                },
+                {
+                    "rule": "optional",
+                    "options": {},
+                    "type": "int32",
+                    "name": "entriesCount",
+                    "id": 2
+                }
+            ],
+            "enums": [],
+            "messages": [],
+            "options": {}
+        },
+        {
+            "name": "App",
+            "fields": [
+                {
+                    "rule": "optional",
+                    "options": {},
+                    "type": "string",
+                    "name": "id",
+                    "id": 1
+                },
+                {
+                    "rule": "optional",
+                    "options": {},
+                    "type": "string",
+                    "name": "title",
+                    "id": 2
+                },
+                {
+                    "rule": "optional",
+                    "options": {
+                        "default": "NONE"
+                    },
+                    "type": "AppType",
+                    "name": "appType",
+                    "id": 3
+                },
+                {
+                    "rule": "optional",
+                    "options": {},
+                    "type": "string",
+                    "name": "creator",
+                    "id": 4
+                },
+                {
+                    "rule": "optional",
+                    "options": {},
+                    "type": "string",
+                    "name": "version",
+                    "id": 5
+                },
+                {
+                    "rule": "optional",
+                    "options": {},
+                    "type": "string",
+                    "name": "price",
+                    "id": 6
+                },
+                {
+                    "rule": "optional",
+                    "options": {},
+                    "type": "string",
+                    "name": "rating",
+                    "id": 7
+                },
+                {
+                    "rule": "optional",
+                    "options": {},
+                    "type": "int32",
+                    "name": "ratingsCount",
+                    "id": 8
+                },
+                {
+                    "rule": "optional",
+                    "options": {},
+                    "id": 12,
+                    "type": "ExtendedInfo",
+                    "name": "extendedinfo"
+                },
+                {
+                    "rule": "optional",
+                    "options": {},
+                    "type": "string",
+                    "name": "creatorId",
+                    "id": 22
+                },
+                {
+                    "rule": "optional",
+                    "options": {},
+                    "type": "string",
+                    "name": "packageName",
+                    "id": 24
+                },
+                {
+                    "rule": "optional",
+                    "options": {},
+                    "type": "int32",
+                    "name": "versionCode",
+                    "id": 25
+                },
+                {
+                    "rule": "optional",
+                    "options": {},
+                    "type": "string",
+                    "name": "priceCurrency",
+                    "id": 32
+                },
+                {
+                    "rule": "optional",
+                    "options": {},
+                    "type": "int32",
+                    "name": "priceMicros",
+                    "id": 33
+                }
+            ],
+            "enums": [],
+            "messages": [
+                {
+                    "name": "ExtendedInfo",
+                    "isGroup": true,
+                    "fields": [
+                        {
+                            "rule": "optional",
+                            "options": {},
+                            "type": "string",
+                            "name": "description",
+                            "id": 13
+                        },
+                        {
+                            "rule": "optional",
+                            "options": {},
+                            "type": "int32",
+                            "name": "downloadsCount",
+                            "id": 14
+                        },
+                        {
+                            "rule": "repeated",
+                            "options": {},
+                            "type": "string",
+                            "name": "permissionId",
+                            "id": 15
+                        },
+                        {
+                            "rule": "optional",
+                            "options": {},
+                            "type": "int32",
+                            "name": "installSize",
+                            "id": 16
+                        },
+                        {
+                            "rule": "optional",
+                            "options": {},
+                            "type": "string",
+                            "name": "packageName",
+                            "id": 17
+                        },
+                        {
+                            "rule": "optional",
+                            "options": {},
+                            "type": "string",
+                            "name": "category",
+                            "id": 18
+                        },
+                        {
+                            "rule": "optional",
+                            "options": {},
+                            "type": "string",
+                            "name": "contactEmail",
+                            "id": 20
+                        },
+                        {
+                            "rule": "optional",
+                            "options": {},
+                            "type": "string",
+                            "name": "downloadsCountText",
+                            "id": 23
+                        },
+                        {
+                            "rule": "optional",
+                            "options": {},
+                            "type": "string",
+                            "name": "contactPhone",
+                            "id": 26
+                        },
+                        {
+                            "rule": "optional",
+                            "options": {},
+                            "type": "string",
+                            "name": "contactWebsite",
+                            "id": 27
+                        },
+                        {
+                            "rule": "optional",
+                            "options": {},
+                            "type": "int32",
+                            "name": "screenshotsCount",
+                            "id": 30
+                        },
+                        {
+                            "rule": "optional",
+                            "options": {},
+                            "type": "string",
+                            "name": "promoText",
+                            "id": 31
+                        },
+                        {
+                            "rule": "optional",
+                            "options": {},
+                            "type": "string",
+                            "name": "recentChanges",
+                            "id": 38
+                        },
+                        {
+                            "rule": "optional",
+                            "options": {},
+                            "type": "string",
+                            "name": "promotionalVideo",
+                            "id": 43
+                        }
+                    ],
+                    "enums": [],
+                    "messages": [],
+                    "options": {}
+                }
+            ],
+            "options": {}
+        },
+        {
+            "name": "Comment",
+            "fields": [
+                {
+                    "rule": "optional",
+                    "options": {},
+                    "type": "string",
+                    "name": "text",
+                    "id": 1
+                },
+                {
+                    "rule": "optional",
+                    "options": {},
+                    "type": "int32",
+                    "name": "rating",
+                    "id": 2
+                },
+                {
+                    "rule": "optional",
+                    "options": {},
+                    "type": "string",
+                    "name": "authorName",
+                    "id": 3
+                },
+                {
+                    "rule": "optional",
+                    "options": {},
+                    "type": "uint64",
+                    "name": "creationTime",
+                    "id": 4
+                },
+                {
+                    "rule": "optional",
+                    "options": {},
+                    "type": "string",
+                    "name": "authorId",
+                    "id": 5
+                }
+            ],
+            "enums": [],
+            "messages": [],
+            "options": {}
+        },
+        {
+            "name": "CategoriesRequest",
+            "fields": [],
+            "enums": [],
+            "messages": [],
+            "options": {}
+        },
+        {
+            "name": "CategoriesResponse",
+            "fields": [
+                {
+                    "rule": "repeated",
+                    "options": {},
+                    "type": "Category",
+                    "name": "categories",
+                    "id": 1
+                }
+            ],
+            "enums": [],
+            "messages": [],
+            "options": {}
+        },
+        {
+            "name": "SubCategoriesRequest",
+            "fields": [
+                {
+                    "rule": "optional",
+                    "options": {},
+                    "type": "AppType",
+                    "name": "appType",
+                    "id": 1
+                }
+            ],
+            "enums": [],
+            "messages": [],
+            "options": {}
+        },
+        {
+            "name": "SubCategoriesResponse",
+            "fields": [
+                {
+                    "rule": "repeated",
+                    "options": {},
+                    "type": "Category",
+                    "name": "category",
+                    "id": 1
+                },
+                {
+                    "rule": "optional",
+                    "options": {},
+                    "type": "string",
+                    "name": "subCategoryDisplay",
+                    "id": 2
+                },
+                {
+                    "rule": "optional",
+                    "options": {},
+                    "type": "int32",
+                    "name": "subCategoryId",
+                    "id": 3
+                }
+            ],
+            "enums": [],
+            "messages": [],
+            "options": {}
+        },
+        {
+            "name": "RequestContext",
+            "fields": [
+                {
+                    "rule": "required",
+                    "options": {},
+                    "type": "string",
+                    "name": "authSubToken",
+                    "id": 1
+                },
+                {
+                    "rule": "required",
+                    "options": {},
+                    "type": "bool",
+                    "name": "isSecure",
+                    "id": 2
+                },
+                {
+                    "rule": "required",
+                    "options": {},
+                    "type": "int32",
+                    "name": "version",
+                    "id": 3
+                },
+                {
+                    "rule": "required",
+                    "options": {},
+                    "type": "string",
+                    "name": "androidId",
+                    "id": 4
+                },
+                {
+                    "rule": "optional",
+                    "options": {},
+                    "type": "string",
+                    "name": "deviceAndSdkVersion",
+                    "id": 5
+                },
+                {
+                    "rule": "optional",
+                    "options": {},
+                    "type": "string",
+                    "name": "userLanguage",
+                    "id": 6
+                },
+                {
+                    "rule": "optional",
+                    "options": {},
+                    "type": "string",
+                    "name": "userCountry",
+                    "id": 7
+                },
+                {
+                    "rule": "optional",
+                    "options": {},
+                    "type": "string",
+                    "name": "operatorAlpha",
+                    "id": 8
+                },
+                {
+                    "rule": "optional",
+                    "options": {},
+                    "type": "string",
+                    "name": "simOperatorAlpha",
+                    "id": 9
+                },
+                {
+                    "rule": "optional",
+                    "options": {},
+                    "type": "string",
+                    "name": "operatorNumeric",
+                    "id": 10
+                },
+                {
+                    "rule": "optional",
+                    "options": {},
+                    "type": "string",
+                    "name": "simOperatorNumeric",
+                    "id": 11
+                }
+            ],
+            "enums": [],
+            "messages": [],
+            "options": {}
+        },
+        {
+            "name": "GetImageRequest",
+            "fields": [
+                {
+                    "rule": "optional",
+                    "options": {},
+                    "type": "string",
+                    "name": "appId",
+                    "id": 1
+                },
+                {
+                    "rule": "optional",
+                    "options": {},
+                    "type": "AppImageUsage",
+                    "name": "imageUsage",
+                    "id": 3
+                },
+                {
+                    "rule": "optional",
+                    "options": {},
+                    "type": "string",
+                    "name": "imageId",
+                    "id": 4
+                }
+            ],
+            "enums": [
+                {
+                    "name": "AppImageUsage",
+                    "values": [
+                        {
+                            "name": "ICON",
+                            "id": 0
+                        },
+                        {
+                            "name": "SCREENSHOT",
+                            "id": 1
+                        },
+                        {
+                            "name": "SCREENSHOT_THUMBNAIL",
+                            "id": 2
+                        },
+                        {
+                            "name": "PROMO_BADGE",
+                            "id": 3
+                        },
+                        {
+                            "name": "BILING_ICON",
+                            "id": 4
+                        }
+                    ],
+                    "options": {}
+                }
+            ],
+            "messages": [],
+            "options": {}
+        },
+        {
+            "name": "GetAssetRequest",
+            "fields": [
+                {
+                    "rule": "required",
+                    "options": {},
+                    "type": "string",
+                    "name": "assetId",
+                    "id": 1
+                },
+                {
+                    "rule": "optional",
+                    "options": {},
+                    "type": "string",
+                    "name": "directDownloadKey",
+                    "id": 2
+                }
+            ],
+            "enums": [],
+            "messages": [],
+            "options": {}
+        },
+        {
+            "name": "GetImageResponse",
+            "fields": [
+                {
+                    "rule": "optional",
+                    "options": {},
+                    "type": "bytes",
+                    "name": "imageData",
+                    "id": 1
+                }
+            ],
+            "enums": [],
+            "messages": [],
+            "options": {}
+        },
+        {
+            "name": "GetAssetResponse",
+            "fields": [
+                {
+                    "rule": "repeated",
+                    "options": {},
+                    "id": 1,
+                    "type": "InstallAsset",
+                    "name": "installasset"
+                }
+            ],
+            "enums": [],
+            "messages": [
+                {
+                    "name": "InstallAsset",
+                    "isGroup": true,
+                    "fields": [
+                        {
+                            "rule": "optional",
+                            "options": {},
+                            "type": "string",
+                            "name": "assetId",
+                            "id": 2
+                        },
+                        {
+                            "rule": "optional",
+                            "options": {},
+                            "type": "string",
+                            "name": "assetName",
+                            "id": 3
+                        },
+                        {
+                            "rule": "optional",
+                            "options": {},
+                            "type": "string",
+                            "name": "assetType",
+                            "id": 4
+                        },
+                        {
+                            "rule": "optional",
+                            "options": {},
+                            "type": "string",
+                            "name": "assetPackage",
+                            "id": 5
+                        },
+                        {
+                            "rule": "optional",
+                            "options": {},
+                            "type": "string",
+                            "name": "blobUrl",
+                            "id": 6
+                        },
+                        {
+                            "rule": "optional",
+                            "options": {},
+                            "type": "string",
+                            "name": "assetSignature",
+                            "id": 7
+                        },
+                        {
+                            "rule": "optional",
+                            "options": {},
+                            "type": "uint64",
+                            "name": "assetSize",
+                            "id": 8
+                        },
+                        {
+                            "rule": "optional",
+                            "options": {},
+                            "type": "uint64",
+                            "name": "refundTimeout",
+                            "id": 9
+                        },
+                        {
+                            "rule": "optional",
+                            "options": {},
+                            "type": "bool",
+                            "name": "forwardLocked",
+                            "id": 10
+                        },
+                        {
+                            "rule": "optional",
+                            "options": {},
+                            "type": "bool",
+                            "name": "secured",
+                            "id": 11
+                        },
+                        {
+                            "rule": "optional",
+                            "options": {},
+                            "type": "int32",
+                            "name": "versionCode",
+                            "id": 12
+                        },
+                        {
+                            "rule": "optional",
+                            "options": {},
+                            "type": "string",
+                            "name": "downloadAuthCookieName",
+                            "id": 13
+                        },
+                        {
+                            "rule": "optional",
+                            "options": {},
+                            "type": "string",
+                            "name": "downloadAuthCookieValue",
+                            "id": 14
+                        }
+                    ],
+                    "enums": [],
+                    "messages": [],
+                    "options": {}
+                }
+            ],
+            "options": {}
+        },
+        {
+            "name": "Request",
+            "fields": [
+                {
+                    "rule": "optional",
+                    "options": {},
+                    "type": "RequestContext",
+                    "name": "context",
+                    "id": 1
+                },
+                {
+                    "rule": "repeated",
+                    "options": {},
+                    "id": 2,
+                    "type": "RequestGroup",
+                    "name": "requestgroup"
+                }
+            ],
+            "enums": [],
+            "messages": [
+                {
+                    "name": "RequestGroup",
+                    "isGroup": true,
+                    "fields": [
+                        {
+                            "rule": "optional",
+                            "options": {},
+                            "type": "AppsRequest",
+                            "name": "appsRequest",
+                            "id": 4
+                        },
+                        {
+                            "rule": "optional",
+                            "options": {},
+                            "type": "CommentsRequest",
+                            "name": "commentsRequest",
+                            "id": 5
+                        },
+                        {
+                            "rule": "optional",
+                            "options": {},
+                            "type": "GetAssetRequest",
+                            "name": "getAssetRequest",
+                            "id": 10
+                        },
+                        {
+                            "rule": "optional",
+                            "options": {},
+                            "type": "GetImageRequest",
+                            "name": "imageRequest",
+                            "id": 11
+                        },
+                        {
+                            "rule": "optional",
+                            "options": {},
+                            "type": "SubCategoriesRequest",
+                            "name": "subCategoriesRequest",
+                            "id": 14
+                        },
+                        {
+                            "rule": "optional",
+                            "options": {},
+                            "type": "CategoriesRequest",
+                            "name": "categoriesRequest",
+                            "id": 21
+                        }
+                    ],
+                    "enums": [],
+                    "messages": [],
+                    "options": {}
+                }
+            ],
+            "options": {}
+        },
+        {
+            "name": "ResponseContext",
+            "fields": [
+                {
+                    "rule": "optional",
+                    "options": {},
+                    "type": "ResultType",
+                    "name": "result",
+                    "id": 1
+                },
+                {
+                    "rule": "optional",
+                    "options": {},
+                    "type": "int32",
+                    "name": "maxAge",
+                    "id": 2
+                },
+                {
+                    "rule": "optional",
+                    "options": {},
+                    "type": "string",
+                    "name": "etag",
+                    "id": 3
+                },
+                {
+                    "rule": "optional",
+                    "options": {},
+                    "type": "int32",
+                    "name": "serverVersion",
+                    "id": 4
+                }
+            ],
+            "enums": [
+                {
+                    "name": "ResultType",
+                    "values": [
+                        {
+                            "name": "OK",
+                            "id": 0
+                        },
+                        {
+                            "name": "BAD_REQUEST",
+                            "id": 1
+                        },
+                        {
+                            "name": "INTERNAL_SERVICE_ERROR",
+                            "id": 2
+                        },
+                        {
+                            "name": "NOT_MODIFIED",
+                            "id": 3
+                        },
+                        {
+                            "name": "USER_INPUT_ERROR",
+                            "id": 4
+                        }
+                    ],
+                    "options": {}
+                }
+            ],
+            "messages": [],
+            "options": {}
+        },
+        {
+            "name": "Response",
+            "fields": [
+                {
+                    "rule": "repeated",
+                    "options": {},
+                    "id": 1,
+                    "type": "ResponseGroup",
+                    "name": "responsegroup"
+                }
+            ],
+            "enums": [],
+            "messages": [
+                {
+                    "name": "ResponseGroup",
+                    "isGroup": true,
+                    "fields": [
+                        {
+                            "rule": "optional",
+                            "options": {},
+                            "type": "ResponseContext",
+                            "name": "context",
+                            "id": 2
+                        },
+                        {
+                            "rule": "optional",
+                            "options": {},
+                            "type": "AppsResponse",
+                            "name": "appsResponse",
+                            "id": 3
+                        },
+                        {
+                            "rule": "optional",
+                            "options": {},
+                            "type": "CommentsResponse",
+                            "name": "commentsResponse",
+                            "id": 4
+                        },
+                        {
+                            "rule": "optional",
+                            "options": {},
+                            "type": "GetAssetResponse",
+                            "name": "getAssetResponse",
+                            "id": 9
+                        },
+                        {
+                            "rule": "optional",
+                            "options": {},
+                            "type": "GetImageResponse",
+                            "name": "imageResponse",
+                            "id": 10
+                        },
+                        {
+                            "rule": "optional",
+                            "options": {},
+                            "type": "CategoriesResponse",
+                            "name": "categoriesResponse",
+                            "id": 20
+                        },
+                        {
+                            "rule": "optional",
+                            "options": {},
+                            "type": "SubCategoriesResponse",
+                            "name": "subCategoriesResponse",
+                            "id": 13
+                        }
+                    ],
+                    "enums": [],
+                    "messages": [],
+                    "options": {}
+                }
+            ],
+            "options": {}
+        }
+    ],
+    "enums": [
+        {
+            "name": "AppType",
+            "values": [
+                {
+                    "name": "NONE",
+                    "id": 0
+                },
+                {
+                    "name": "APPLICATION",
+                    "id": 1
+                },
+                {
+                    "name": "RINGTONE",
+                    "id": 2
+                },
+                {
+                    "name": "WALLPAPER",
+                    "id": 3
+                },
+                {
+                    "name": "GAME",
+                    "id": 4
+                }
+            ],
+            "options": {}
+        }
+    ],
+    "imports": [],
+    "options": {
+        "java_package": "com.gc.android.market.api.model"
+    },
+    "services": []
+}
