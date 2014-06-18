@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/sarhugo/android-market-api.svg)](https://travis-ci.org/sarhugo/android-market-api)
+
 android-market-api
 ==================
 
