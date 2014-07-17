@@ -1,6 +1,6 @@
 {
   "name": "android-market-api",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "NodeJS implementation of the java Android Market API",
   "main": "index.js",
   "scripts": {
