@@ -11,8 +11,8 @@ describe('Android Market Session', function () {
   it('Should have defaults parameters for the request context', function (done) {
     var context = _api.getContext();
     context.getIsSecure().should.be.false;
-    context.getVersion().should.be.equal(2009011);
-    context.getDeviceAndSdkVersion().should.be.equal('passion:9');
+    context.getVersion().should.be.equal(8013013);
+    context.getDeviceAndSdkVersion().should.be.equal('crespo:15');
     context.getOperatorAlpha().should.be.equal('T-Mobile');
     context.getSimOperatorAlpha().should.be.equal('T-Mobile');
     context.getOperatorNumeric().should.be.equal('310260');

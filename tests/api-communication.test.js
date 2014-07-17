@@ -74,7 +74,5 @@ describe('Android Market Communication', function() {
         done();
       });
     });
-    //GetAssetRequest
-    //GetImageRequest
   })
 });
