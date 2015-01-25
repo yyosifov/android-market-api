@@ -1,4 +1,5 @@
 var _config = require('./settings.json'),
+  should = require('should'),
   API = require('../index.js'),
   _api = new API();
 
