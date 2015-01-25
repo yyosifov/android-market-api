@@ -4,7 +4,7 @@
   "description": "NodeJS implementation of the java Android Market API",
   "main": "index.js",
   "scripts": {
-    "test": "grunt mochaTest:test"
+    "test": "grunt mochaTest:testAll"
   },
   "repository": {
     "type": "git",

@@ -28,13 +28,16 @@ describe('Android Market Communication', function() {
     it('Should make AppsRequest', function(done) {
       var r = new API.AppsRequest();
       r.setAppType(API.AppType.GAME)
-      r.setStartIndex(1)
-      r.setEntriesCount(10)
-      r.setWithExtendedInfo(true)
+      r.setQuery('a');
+      r.setStartIndex(1);
+      r.setEntriesCount(10);
+      r.setWithExtendedInfo(true);
       r.setViewType(API.AppsRequest.ViewType.FREE);
       _api.query(r, function(err, response) {
         (err === null).should.be.true;
         response.app.should.be.an.Array;
+        response.app.length.should.equal(10);
+        //console.log(JSON.stringify(response.app));
         done();
       });
     });
